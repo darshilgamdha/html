@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
+    <title>Company Portfoio</title>
+</head>
+ 
+<body>
+    <header>
+        <div class="header-content">
+            <img src="image/logo.png" alt="">
+            <h1 class="site-name">JNK Infotech</h1>
+            <div class="search-container">
+                <input type="search" placeholder="search" class="search-bar">
+                <button class="search-button">
+                    &#128269
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="aside left">
+            <nav>
+                <ul>
+                    <li id="home"><a href="#">Home</a></li>
+                    <li id="our_team"><a href="#">Our Team</a></li>
+                    <li id="our_projects"><a href="#">Our Projects</a></li>
+                    <li id="goal"><a href="#">Our Goals</a></li>
+                    <li id="about_us"><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+            
+        </main>
+
+        <aside class="aside right">
+            <h2></h2>
+
+            <div class="popup">
+                <div class="popup-header">
+                    <span>FREE MENU CODE SNIPPETS</span>
+                </div>
+                <p>Dozens of free coding templates you can start using right now</p>
+                <a class="download-btn">DOWNLOAD FOR FREE</a>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+
+        function loadContent(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('main-content').innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching content:', error));
+        }
+        loadContent("home.html");
+
+        // Get references to the <li> elements
+        const homeLi = document.getElementById("home");
+        const teamLi = document.getElementById("our_team");
+        const projectsLi = document.getElementById("our_projects");
+        const goalLi = document.getElementById("goal");
+        const aboutLi = document.getElementById("about_us");
+
+        // Get reference to the main content area
+        const mainContent = document.getElementById("main-content");
+
+        // Add event listeners to the <li> elements
+        homeLi.addEventListener("click", () => {
+            loadContent("home.html");
+        });
+
+        teamLi.addEventListener("click", () => {
+            loadContent("team.html");
+        });
+
+        projectsLi.addEventListener("click", () => {
+            loadContent("project.html");
+        });
+
+        goalLi.addEventListener("click", () => {
+            loadContent("goal.html");
+        });
+
+        aboutLi.addEventListener("click", () => {
+            loadContent("about_us.html");
+        });
+
+
+    </script>
+</body>
+
+</html>

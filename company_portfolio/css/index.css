@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content img{
+    max-height: 50px;
+    margin-right: 20px;
+}
+
+.header-content h1{
+    font-size: 1.5em;
+}
+
+.search-container{
+    display: flex;
+    align-items: flex-end;
+    align-items: center;
+}
+
+.search-bar{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 1.2em;
+}
+
+
+.search-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1.2em;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;   
+}
+
+header{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.container{
+    display: flex;
+    flex: 1;
+}
+
+.aside{
+    background-color: #f4f4f4;
+    padding: 1em;
+    flex:1 200PX;
+}
+
+.left{
+    order: -1;
+}
+
+.left li{
+    text-align: center;
+}
+
+.right{
+    order: 1;
+}
+
+main{
+    flex: 3 1 1000px;
+    padding: 1em;
+}
+
+@media(max-width:768px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .aside{
+        order: 0;
+    }
+
+    main{
+        order: 1;
+    }
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav ul li{
+    margin: 10px 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:#333;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color:lightsalmon;
+}
+.popup {
+    bottom: px;
+    width: 100%;
+    background-color: #002b49;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00aaff;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: bold;
+}
+
+.popup p {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: #ffffff;
+    color: #002b49;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: #e0e0e0;
+}
+
+
+.open-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+

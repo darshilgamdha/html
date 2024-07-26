@@ -1,0 +1,15 @@
+.img-div{
+    width: 500px;
+    height: 500px;
+}
+
+.img-div{
+    width: 500px;
+    height: 500px;
+    -webkit-mask-image: url(/image/logo-svgrepo-com.svg);
+    mask-image: url(/image/logo-svgrepo-com.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
